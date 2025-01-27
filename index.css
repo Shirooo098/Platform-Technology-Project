@@ -1,0 +1,258 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --white: #F3F3E0;
+    --deepBlue: #133E87;
+    --blue: #608BC1;
+    --lightBlue: #CBDCEB; 
+    --gray: #f5f4f4;
+}
+body{
+    width: 100svw;
+    height: 90svh;
+    overflow-x: hidden;
+}
+
+header{
+    padding: 1.5em 15em;
+    background-color: var(--deepBlue);
+    height: 2svh;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+.branches{
+    height: 100%;
+    float: right;
+}
+
+header ul{
+    display: flex;
+    align-content: center;
+    gap: 10px;
+}
+
+header ul li{
+    list-style-type: none;
+}
+
+header ul li a{
+    float: right;
+    text-decoration: none;
+    color: var(--white);
+    font-size: 1rem;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5em 15em;
+    height: 9svh;
+    width: 100svw;
+    background-color: var(--white);
+}
+.logo{
+    display: flex;
+    width: 40%;
+    height: 100%;
+}
+.logo > h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(1rem, 1.5vw, 2rem);
+    color: var(--deepBlue);
+}
+.logo img{
+    aspect-ratio: 1/1;
+}
+
+nav ul li{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav ul li a{
+    text-decoration: none;
+    color: var(--deepBlue);
+    font-size: clamp(1rem, 1.5vw, 2rem);
+}
+.pages{
+    display: flex;
+    width: 60%;
+}
+.pages ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    font-size: 2rem;
+}
+main{
+    height: 80svh;
+    width: 100svw;
+    background-image: url("assets/schoolBG.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 1em 2em;
+}
+.main-content{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--white);
+    gap: 1.5rem;
+    width: 80svw;
+}
+.heading-wrapper h1{
+    display: flex;
+    justify-content: center;
+    font-size: 3.5rem;
+}
+
+.btn-container{
+    display: flex;
+    justify-content: center;
+}
+
+.btn-container button{
+    border: none;
+    border-radius: 1rem;
+    background-color: var(--deepBlue);
+    color: var(--white);
+    font-size: clamp(1rem, 1vw, 2rem);
+    width: 8svw;
+    height: 6svh;
+    transition: 0.2s ease-in;
+}
+
+.btn-container button:hover{
+    cursor: pointer;
+    background-color: #0e2b5e;
+}
+
+.card-container{
+    background-color: var(--gray);
+    display: flex;
+    justify-content: center;
+    width: 100svw;
+    height: 50svh;
+}
+
+.card-wrapper{
+    display: flex;
+    width: 80%;
+}
+
+.card-wrapper > ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.card-container ul li{
+    list-style-type: none;
+}
+
+.card-container ul li img{
+    height: 25svh;
+    width: 20svw;
+    box-shadow: 0 0 15px rgba(0,0,0, 0.7);
+}
+article{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 60svh;
+    width: 100svw;
+    padding: 1em 15em;
+}
+.article-heading{
+    width: 100%;
+}
+.article-heading h1{
+    font-size: 4rem;
+    border-bottom: 1px solid var(--deepBlue);
+}
+.text-container{
+    padding: 1em;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    font-size: 2rem;
+}
+.ija{
+    width: 50%;
+    display: flex;
+}
+.ija p{
+    font-size: 4rem;
+}
+
+.text-wrapper{
+    width: 50%;
+    letter-spacing: 2px;
+}
+.text-wrapper p{
+    text-align: justify;
+}
+
+
+footer{
+    background-color: var(--deepBlue);
+    height: 30svh;
+    width: 100svw;
+    display: flex;
+    padding: 1.5em 15em;
+    color: var(--white);
+}
+.ija img{
+    width: 40%;
+    aspect-ratio: 1/1;
+}
+.logo-name{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--deepBlue);
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 60%;
+}
+.social{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 40%;
+}
+.icons{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.fb, .twitter{
+    display: flex;
+    gap: 10px;
+}
+
+.details{
+    display: flex;
+    flex-direction: column;
+}
