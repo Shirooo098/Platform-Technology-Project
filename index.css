@@ -70,6 +70,8 @@ nav{
     aspect-ratio: 1/1;
 }
 
+
+
 nav ul li{
     list-style-type: none;
     display: flex;
@@ -87,7 +89,7 @@ nav ul li a{
 }
 .pages ul{
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     gap: 1rem;
     width: 100%;
@@ -149,15 +151,15 @@ main{
     display: flex;
     justify-content: center;
     width: 100svw;
-    height: 50svh;
+    height: 100%;
 }
 
 .card-wrapper{
     display: flex;
-    width: 80%;
+    width: 100%;
 }
 
-.card-wrapper > ul{
+.card-wrapper ul{
     width: 100%;
     display: flex;
     justify-content: space-evenly;
@@ -169,18 +171,23 @@ main{
 }
 
 .card-container ul li img{
-    height: 25svh;
-    width: 20svw;
+    height: 30svh;
+    width: 30svw;
     box-shadow: 0 0 15px rgba(0,0,0, 0.7);
 }
 article{
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
     height: 60svh;
-    width: 100svw;
     padding: 1em 15em;
 }
+
+.article-container{
+    width: 80svw;
+}
+
 .article-heading{
     width: 100%;
 }
@@ -193,7 +200,6 @@ article{
     display: flex;
     justify-content: space-evenly;
     width: 100%;
-    font-size: 2rem;
 }
 .ija{
     width: 50%;
@@ -209,19 +215,15 @@ article{
 }
 .text-wrapper p{
     text-align: justify;
+    font-size: clamp(1rem, 1.5vw, 3rem);
 }
 
-
-footer{
-    background-color: var(--deepBlue);
-    height: 30svh;
-    width: 100svw;
-    display: flex;
-    padding: 1.5em 15em;
-    color: var(--white);
+.logo-name p{
+    font-size: clamp(1.5rem, 2.5vw, 3rem);
 }
+
 .ija img{
-    width: 40%;
+    width: 30%;
     aspect-ratio: 1/1;
 }
 .logo-name{
@@ -230,29 +232,82 @@ footer{
     flex-direction: column;
     color: var(--deepBlue);
 }
-.info{
+
+footer{
+    background-color: var(--deepBlue);
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    width: 60%;
+    justify-content: center;
+    height: 30svh;
+    width: 100svw;
+    padding: 1.5em 15em;
+    color: var(--white);
 }
-.social{
+.footer-container{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.footer-heading{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.address, .socials{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     width: 40%;
 }
-.icons{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+.address p, .socials p{
+    font-size: clamp(0.5rem, 1vw, 2rem);
 }
-.fb, .twitter{
+.footer-info{
     display: flex;
-    gap: 10px;
+    justify-content: space-between;
+    width: 100%;
 }
 
-.details{
+.footer-ija, .footer-social{
+    width: 40%;
+}
+
+.fb, .twitter{
     display: flex;
-    flex-direction: column;
+    width: 100%;
+}
+
+@media(max-width: 900px){
+    .card-wrapper ul{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .card-container ul li img{
+        height: 25svh;
+        width: 80svw;
+    }
+}
+@media(max-width: 800px){
+    .ija img{
+        width: 20svw;
+        aspect-ratio: 1/1;
+    }
+}
+@media(max-width: 650px){
+    .article-heading h1{
+        display: flex;
+        justify-content: center;
+    }
+    .text-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .text-wrapper{
+        margin: 2rem 0;
+        width: 100%;
+    }
 }
